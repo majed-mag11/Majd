@@ -1,0 +1,162 @@
+/* PAGE BACKGROUND */
+html ,body {
+
+    height: 100%;
+    background: linear-gradient(to bottom, #FF8000, orange);
+}
+/* MAIN WRAPPER */
+.table1 {
+    margin-top:20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* space between the 3 main sections */
+    align-items: center;
+}
+
+/* TOP SECTION */
+.prom {
+    width: 750px;
+    padding: 40px;
+    border: 5px solid #333;
+    border-radius: 25px;
+    background-color: #FF8000;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    text-align: center;
+}
+
+/* MIDDLE SECTION (ABOUT + HOBBY) */
+.middle {
+    width: 750px;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 10px; /* small gap between the two boxes */
+}
+
+/* SHARED BOX STYLE */
+.about, .hobby {
+    background-color: #FF8000;
+    border: 5px solid #333;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    padding: 25px;
+}
+
+/* INDIVIDUAL WIDTHS */
+.about {
+    flex: 1.5; /* wider */
+}
+
+.hobby {
+    flex: 1; /* narrower */
+}
+
+/* BOTTOM SECTION */
+.person {
+    width: 750px;
+    padding: 30px;
+    border: 5px solid #333;
+    border-radius: 25px;
+    background-color: #FF8000;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    text-align: center;
+}
+
+/* BUTTON STYLE */
+button {
+    background-color: #FFB108;
+    border: 3px solid #333;
+    border-radius: 25px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.aboutme {
+    display: flex;
+    justify-content: center;   /* centers content inside */
+    align-items: center;        /* vertically centers content */
+    flex-direction: column;     /* keeps text stacked nicely */
+    width: 750px;
+    margin: 20px auto;          /* THIS centers the div */
+    background-color: #FF8000;
+    border: 5px solid #333;
+    border-radius: 25px;
+    padding: 50px;
+    font-weight: bold;
+    text-align: center;
+}
+.hobby-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px auto;
+    width: 700px;
+}
+
+.hobby-list li{
+    background-color: #FF8000;
+    border: 4px solid #333;
+    border-radius: 25px;
+    padding: 20px;
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.hobby-list .icon {
+    font-size: 30px;
+}
+.hobbies-table {
+    width: 700px;
+    margin: auto;
+}
+.achievements {
+    max-width: 750px;      /* smaller than before */
+    width: 90%;            /* responsive on small screens */
+    margin: 20px auto;
+    background-color: #FF8000;
+    border: 4px solid #333;
+    border-radius: 30px;
+    padding: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: left;
+    box-shadow: 0 0 8px rgba(0,0,0,0.25);
+}
+
+.achievements h1 {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.achievements p {
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+.achievement-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.achievement-list li {
+    background-color: #ffa64d;
+    border: 2px solid #333;
+    border-radius: 18px;
+    padding: 10px 14px;
+    margin-bottom: 10px;
+    line-height: 1.3;
+    box-shadow: 0 0 4px rgba(0,0,0,0.2);
+}
+
+.achievement-list li strong {
+    color: #222;
+}
+
