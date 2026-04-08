@@ -2,33 +2,90 @@
 
 <html lang="en">
     <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
         <link href="styles.css" rel="stylesheet">
         <title>My Webpage</title>
     </head>
+
     <body>
-        <div class="table1">
-            <div class="prom">
-                <h1>Hello, I am Majd!</h1>
-                <h2>And this is my webpage.</h2>
-            </div>
-            <div class="middle">
-                <div class="about">
-                    <h1>About me</h1>
-                    <button name="aboutMe" onclick="window.location.href='aboutme.html'">
-                        Check it out!
-                    </button>
+        <button id="openContact" class="contact-toggle">Contact</button>
+        <div class="content-wrapper">
+
+            <div class="table1">
+                <div class="prom">
+                    <h1>Hello, I am Majd!</h1>
+                    <h2>And this is my webpage.</h2>
                 </div>
-                <div class="hobby">
-                    <h1>Hobbies.</h1>
-                    <button name="hobbies" onclick="window.location.href='hobbies.html'">Check it out!</button>
+
+                <div class="middle">
+                    <div class="about">
+                        <h1>About me</h1>
+                        <button name="aboutMe" onclick="window.location.href='aboutme.html'">
+                            Check it out!
+                        </button>
+                    </div>
+
+                    <div class="hobby">
+                        <h1>Hobbies.</h1>
+                        <button name="hobbies" onclick="window.location.href='hobbies.html'">Check it out!</button>
+                    </div>
                 </div>
-            </div>
-            <div class="person">
-                <h1>Personal Acheivments.</h1>
-                <button name="personal" onclick="window.location.href='personal.html'">Check it out!</button>
+
+                <div class="person">
+                    <h1>Personal Acheivments.</h1>
+                    <button name="personal" onclick="window.location.href='personal.html'">Check it out!</button>
+                </div>
             </div>
         </div>
+        <div class="contact-box">
+                <h1>Contact Me</h1>
+
+                <ul class="contact-list">
+                    <li>
+                        <span class="icon">&#128231;</span>
+                        <strong>Email:</strong>
+                        <a href="mailto:majedaf07@gmail.com">majedaf07@gmail.com</a>
+                    </li>
+
+                    <li>
+                        <span class="icon">&#128241;</span>
+                        <strong>Phone:</strong>
+                        <a href="tel:+963953460830">+963 953 460 830</a>
+                    </li>
+
+                    <li>
+                        <span class="icon"></span>
+                        <i class="fab fa-instagram" style="font-size:20px;color:#E1306C;"></i>
+                        <a href="https://instagram.com/_mag11_" target="_blank">@_mag11_</a>
+                    </li>
+
+                    <li>
+                        <span class="icon"></span>
+                        <strong>GitHub:</strong>
+                        <a href="https://github.com/majed-mag11" target="_blank">github.com/majed-mag11</a>
+                    </li>
+                </ul>
+            </div>
+        <script>
+            const contactBox = document.querySelector('.contact-box');
+            const openBtn = document.getElementById('openContact');
+            const content = document.querySelector('.content-wrapper');
+
+            openBtn.addEventListener('click', () => {
+                contactBox.classList.toggle('active');
+                content.classList.toggle('blur-background');
+            });
+
+            document.addEventListener('click', (e) => {
+                if (!contactBox.contains(e.target) && e.target !== openBtn) {
+                    contactBox.classList.remove('active');
+                    content.classList.remove('blur-background');
+                }
+            });
+
+        </script>
     </body>
 </html>
