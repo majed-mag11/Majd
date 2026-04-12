@@ -205,7 +205,7 @@ button {
 }
 .contact-box {
     position: fixed;
-    top: -350px;
+    top: -370px;
     left: 50%;
     transform: translateX(-50%);
     width: 350px;
